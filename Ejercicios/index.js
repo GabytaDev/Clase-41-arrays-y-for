@@ -239,4 +239,50 @@ const personaMayorEdad = (nombresAlumnas) => {
 }
 
 console.log(personaMayorEdad(nombresAlumnas))
+
+// Desempeño del curso
+
+// Dado un array bidimensional, compuesto por un array de nombres y otro de notas numericas, hace una funcion que muestre en 
+// consola la calificación promedio del grupo y tambien muestre en consola la cantidad de estudiantes que obtuvieron una nota por 
+// encima del promedio del grupo.
  
+curso = [
+    ["naty", "mecha", "eli", "gaby", "mika"],
+    [8, 5, 3, 9, 6]]
+
+
+
+const promedioCurso = (curso) => {
+    sumaNotas = 0
+    contadorNotas = 0
+
+    for (let index = 0; index < curso [1].length; index++) {
+        sumaNotas += curso[1][index]
+        contadorNotas++
+    }
+
+    return sumaNotas / contadorNotas
+}  
+let promedioFinal = promedioCurso(curso)
+
+
+console.log(promedioCurso(curso))
+console.log(promedioFinal)
+
+const mejorPromedio = (curso) => {
+
+    for (let index = 0; index < curso[1].length; index++) {
+          
+        
+        if  (promedioFinal < (curso[1][index] )) {
+
+            console.log(curso[0][index])
+          
+        }
+    }
+    
+}
+
+mejorPromedio(curso)
+
+    
