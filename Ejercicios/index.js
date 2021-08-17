@@ -93,28 +93,28 @@
 
 
 
-const notas = [10, 9, 6, 4, 7, 8, 5, 10, 8, 7]
+// const notas = [10, 9, 6, 4, 7, 8, 5, 10, 8, 7]
 
-const promedioPromocion = (notas) =>{
-    let notasMayoresASiete = 0   
-    let suma = 0
-    for(let i = 0; i<notas.length; i++){
-        if (notas[i]> 7){
-            notasMayoresASiete++
+// const promedioPromocion = (notas) =>{
+//     let notasMayoresASiete = 0   
+//     let suma = 0
+//     for(let i = 0; i<notas.length; i++){
+//         if (notas[i]> 7){
+//             notasMayoresASiete++
 
-            suma+=notas[i] 
+//             suma+=notas[i] 
 
-            console.log(suma)
+//             console.log(suma)
 
-            console.log(notasMayoresASiete)
-        } 
-        promedio = suma/notasMayoresASiete
-        // console.log(promedio)
-        }
+//             console.log(notasMayoresASiete)
+//         } 
+//         promedio = suma/notasMayoresASiete
+//         // console.log(promedio)
+//         }
         
-        return promedio
-}
-console.log(promedioPromocion(notas))
+//         return promedio
+// }
+// console.log(promedioPromocion(notas))
 
 //Promedio de promoción
 
@@ -143,11 +143,6 @@ console.log(promedioPromocion(notas))
 
 // Dado un array de cualquier longitud, compuesto por numeros que representan temperaturas de una región, 
 // se requiere retornar cuál fue la mayor temperatura.
-
-
-
-//recorrer el array y comparar el primer numero con el guardar el mas  segundo ygrande, pasar el siguiente y hacer lo mismo
-//cuando ya tenga el mayor retornar ese valor
 
 // const temperaturas = [10, 9, 6, 14, 37, 8, 25, 15, 8, 27]
 
@@ -190,10 +185,10 @@ console.log(promedioPromocion(notas))
 
 //Matrices (arreglos bidimensionales)//
 //Mostrar en consola: Dado un array bidimensional, compuesto de dos arrays con 5 nombres cada uno, mostrar cada uno de los nombres en consola.
-nombres = [["naty", "mecha", "eli", "gaby", "mika"],["caro", "rocio", "maria", "agustina", "ana"]]
+// nombres = [["naty", "mecha", "eli", "gaby", "mika"],["caro", "rocio", "maria", "agustina", "ana"]]
 
-console.log(nombres[0])
-console.log(nombres[1])
+// console.log(nombres[0])
+// console.log(nombres[1])
 
 
 //Mostrar en consola 2 : Dado un array bidimensional, compuesto de dos arrays con 5 numeros cada uno, mostrar en consola solo los numeros mayores a 10.
@@ -206,9 +201,9 @@ const numeros = [
 
 const numerosMayoresA10 = (numeros) => {
   for (let index = 0; index < numeros.length; index++) {
-    let array = numeros[index];
+    let array = numeros[index]; //guardo en array la posicion 
 
-    for (let j = 0; j < array.length; j++) {
+    for (let j = 0; j < array.length; j++) { 
       if (array[j] > 10) {
         console.log(array[j]);
       }
@@ -216,3 +211,32 @@ const numerosMayoresA10 = (numeros) => {
   }
 };
 numerosMayoresA10(numeros);
+
+// Alumna más grande
+
+// Dado un array bidimensional compuesto de dos arrays de 5 elementos cada uno, donde el primero esta compuesto de nombres y el segundo de edades,
+// retornar el nombre de la persona con la mayor edad.
+
+nombresAlumnas = [
+    ["naty", "mecha", "eli", "gaby", "mika"],
+    [1, 5, 12, 9, 6]]
+
+const personaMayorEdad = (nombresAlumnas) => {
+    let mayorEdad = 0
+    let posicionNombre = 0
+
+    for (let index = 0; index < nombresAlumnas[1].length; index++) {
+        
+        if(nombresAlumnas[1][index] > mayorEdad){
+            mayorEdad = nombresAlumnas[1][index]
+
+            posicionNombre = index
+        } 
+    }
+    return ("el nombre es " + nombresAlumnas[0][posicionNombre] + " y la edad es " + nombresAlumnas[1] [posicionNombre])
+    
+  
+}
+
+console.log(personaMayorEdad(nombresAlumnas))
+ 
