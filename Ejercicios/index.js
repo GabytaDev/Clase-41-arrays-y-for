@@ -285,4 +285,26 @@ const mejorPromedio = (curso) => {
 
 mejorPromedio(curso)
 
+//seis divs con forma de tarjeta
+//un boton al hacer click aparezca en todos los divs una frase "hola chicas"
+// al hacer click a cada tarjeta cambien de color
+
+let cards = document.querySelectorAll(".card")
+const boton = document.getElementById("boton")
+
+console.log(cards)
+
+boton.onclick = () => {
+  for (let i = 0; i < cards.length; i++) {
+    cards[i].textContent = "hola chicas"
     
+  }
+      
+}
+
+for (let i = 0; i < cards.length; i++) {
+ cards[i].onclick = () => {
+  cards[i].style.backgroundColor = "blue"
+ }
+  
+}
